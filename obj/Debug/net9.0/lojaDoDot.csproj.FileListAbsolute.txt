@@ -144,3 +144,9 @@ C:\Users\asdasdasd\Documents\projects\lojaDoDot\obj\Debug\net9.0\refint\lojaDoDo
 C:\Users\asdasdasd\Documents\projects\lojaDoDot\obj\Debug\net9.0\lojaDoDot.pdb
 C:\Users\asdasdasd\Documents\projects\lojaDoDot\obj\Debug\net9.0\lojaDoDot.genruntimeconfig.cache
 C:\Users\asdasdasd\Documents\projects\lojaDoDot\obj\Debug\net9.0\ref\lojaDoDot.dll
+C:\Users\asdasdasd\Documents\projects\lojaDoDot\obj\Debug\net9.0\lojaDoDot.sourcelink.json
+C:\Users\asdasdasd\Documents\projects\lojaDoDot\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\asdasdasd\Documents\projects\lojaDoDot\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\asdasdasd\Documents\projects\lojaDoDot\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\asdasdasd\Documents\projects\lojaDoDot\bin\Debug\net9.0\lojaDoDot.staticwebassets.runtime.json
+C:\Users\asdasdasd\Documents\projects\lojaDoDot\obj\Debug\net9.0\compressed\42bhtnnops-bizrxo08n4.gz

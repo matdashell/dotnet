@@ -3,8 +3,8 @@
   "defaultVariables": null,
   "documentGenerator": {
     "fromDocument": {
-      "url": "openapi.yml",
-      "output": null,
+      "url": "./openapi.yml",
+      "output": "../../wwwroot/swagger/openapi.json",
       "newLineBehavior": "Auto"
     }
   },

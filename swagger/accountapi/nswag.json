@@ -3,7 +3,7 @@
   "defaultVariables": null,
   "documentGenerator": {
     "fromDocument": {
-      "url": "accountapi.yml",
+      "url": "./accountapi.yml",
       "output": null,
       "newLineBehavior": "Auto"
     }

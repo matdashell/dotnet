@@ -8,7 +8,7 @@ using lojaDoDot.infra.data.repository;
 using lojaDoDot.infra.data.repository.impl;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddOpenApi();
+builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseInMemoryDatabase("TestDatabase"));
@@ -29,7 +29,13 @@ builder.Services.AddHttpClient<AccountApi.ApiClient>(client =>
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 var app = builder.Build();
 
-app.MapOpenApi();
+app.UseStaticFiles();
+app.UseSwaggerUI(options => 
+    {
+        options.SwaggerEndpoint("/swagger/openapi.json", "openApi");
+        options.RoutePrefix = string.Empty;
+    });
+
 app.UseHttpsRedirection();
 app.MapControllers();
 app.Run();

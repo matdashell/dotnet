@@ -5,3 +5,5 @@ Microsoft.EntityFrameworkCore.InMemory → Para usar o in-memory database.
 Microsoft.AspNetCore.Mvc.Core → Para criar controllers e APIs no ASP.NET Core.
 AutoMapper.Extensions.Microsoft.DependencyInjection → Para injetar o AutoMapper no projeto.
 Newtonsoft.Json → Para arquivos gerados swagger.
+Swashbuckle.AspNetCore → Swagger UI
+

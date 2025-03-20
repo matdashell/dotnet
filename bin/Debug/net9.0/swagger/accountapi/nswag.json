@@ -3,8 +3,8 @@
   "defaultVariables": null,
   "documentGenerator": {
     "fromDocument": {
-      "url": "accountapi.yml",
-      "output": null,
+      "url": "./accountapi.yml",
+      "output": "./swagger.json",
       "newLineBehavior": "Auto"
     }
   },

@@ -1,12 +1,362 @@
 {
   "Version": 1,
-  "Hash": "vf8hBCx0Th/KLhRY9mGHcyl4eonjxvhdVNimudeSRd4=",
+  "Hash": "F1i5JimOKYDoPHnTxeK9p3Y/nYKW6mbqQJc8ZKhfDz8=",
   "Source": "lojaDoDot",
   "BasePath": "_content/lojaDoDot",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "lojaDoDot\\wwwroot",
+      "Source": "lojaDoDot",
+      "ContentRoot": "C:\\Users\\asdasdasd\\Documents\\projects\\lojaDoDot\\wwwroot\\",
+      "BasePath": "_content/lojaDoDot",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\asdasdasd\\Documents\\projects\\lojaDoDot\\obj\\Debug\\net9.0\\compressed\\42bhtnnops-bizrxo08n4.gz",
+      "SourceId": "lojaDoDot",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\asdasdasd\\Documents\\projects\\lojaDoDot\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/lojaDoDot",
+      "RelativePath": "swagger/openapi#[.{fingerprint=bizrxo08n4}]?.json.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\asdasdasd\\Documents\\projects\\lojaDoDot\\wwwroot\\swagger\\openapi.json",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "lh8pjm91os",
+      "Integrity": "OdJAINPX5PMAvgJuOY6j0W/UNkSKT8/PceDqnHBJ3uU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\asdasdasd\\Documents\\projects\\lojaDoDot\\wwwroot\\swagger\\openapi.json"
+    },
+    {
+      "Identity": "C:\\Users\\asdasdasd\\Documents\\projects\\lojaDoDot\\wwwroot\\swagger\\openapi.json",
+      "SourceId": "lojaDoDot",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\asdasdasd\\Documents\\projects\\lojaDoDot\\wwwroot\\",
+      "BasePath": "_content/lojaDoDot",
+      "RelativePath": "swagger/openapi#[.{fingerprint}]?.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bizrxo08n4",
+      "Integrity": "gw1azVfbhPdFnlX73OA2hxXhuqu6sW98ZiM30UDyD38=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\swagger\\openapi.json"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "swagger/openapi.bizrxo08n4.json",
+      "AssetFile": "C:\\Users\\asdasdasd\\Documents\\projects\\lojaDoDot\\obj\\Debug\\net9.0\\compressed\\42bhtnnops-bizrxo08n4.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001047120419"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "954"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OdJAINPX5PMAvgJuOY6j0W/UNkSKT8/PceDqnHBJ3uU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 17:38:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"gw1azVfbhPdFnlX73OA2hxXhuqu6sW98ZiM30UDyD38=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bizrxo08n4"
+        },
+        {
+          "Name": "label",
+          "Value": "swagger/openapi.json"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gw1azVfbhPdFnlX73OA2hxXhuqu6sW98ZiM30UDyD38="
+        }
+      ]
+    },
+    {
+      "Route": "swagger/openapi.bizrxo08n4.json",
+      "AssetFile": "C:\\Users\\asdasdasd\\Documents\\projects\\lojaDoDot\\wwwroot\\swagger\\openapi.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8333"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gw1azVfbhPdFnlX73OA2hxXhuqu6sW98ZiM30UDyD38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 17:38:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bizrxo08n4"
+        },
+        {
+          "Name": "label",
+          "Value": "swagger/openapi.json"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gw1azVfbhPdFnlX73OA2hxXhuqu6sW98ZiM30UDyD38="
+        }
+      ]
+    },
+    {
+      "Route": "swagger/openapi.bizrxo08n4.json.gz",
+      "AssetFile": "C:\\Users\\asdasdasd\\Documents\\projects\\lojaDoDot\\obj\\Debug\\net9.0\\compressed\\42bhtnnops-bizrxo08n4.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "954"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OdJAINPX5PMAvgJuOY6j0W/UNkSKT8/PceDqnHBJ3uU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 17:38:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bizrxo08n4"
+        },
+        {
+          "Name": "label",
+          "Value": "swagger/openapi.json.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OdJAINPX5PMAvgJuOY6j0W/UNkSKT8/PceDqnHBJ3uU="
+        }
+      ]
+    },
+    {
+      "Route": "swagger/openapi.json",
+      "AssetFile": "C:\\Users\\asdasdasd\\Documents\\projects\\lojaDoDot\\obj\\Debug\\net9.0\\compressed\\42bhtnnops-bizrxo08n4.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001047120419"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "954"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OdJAINPX5PMAvgJuOY6j0W/UNkSKT8/PceDqnHBJ3uU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 17:38:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"gw1azVfbhPdFnlX73OA2hxXhuqu6sW98ZiM30UDyD38=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gw1azVfbhPdFnlX73OA2hxXhuqu6sW98ZiM30UDyD38="
+        }
+      ]
+    },
+    {
+      "Route": "swagger/openapi.json",
+      "AssetFile": "C:\\Users\\asdasdasd\\Documents\\projects\\lojaDoDot\\wwwroot\\swagger\\openapi.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8333"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gw1azVfbhPdFnlX73OA2hxXhuqu6sW98ZiM30UDyD38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 17:38:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gw1azVfbhPdFnlX73OA2hxXhuqu6sW98ZiM30UDyD38="
+        }
+      ]
+    },
+    {
+      "Route": "swagger/openapi.json.gz",
+      "AssetFile": "C:\\Users\\asdasdasd\\Documents\\projects\\lojaDoDot\\obj\\Debug\\net9.0\\compressed\\42bhtnnops-bizrxo08n4.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "954"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OdJAINPX5PMAvgJuOY6j0W/UNkSKT8/PceDqnHBJ3uU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 17:38:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OdJAINPX5PMAvgJuOY6j0W/UNkSKT8/PceDqnHBJ3uU="
+        }
+      ]
+    }
+  ]
 }
