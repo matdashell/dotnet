@@ -1,0 +1,6 @@
+@lojaDoDot_HostAddress = http://localhost:5109
+
+GET {{lojaDoDot_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

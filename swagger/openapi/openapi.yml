@@ -1,0 +1,237 @@
+openapi: 3.0.0
+info:
+  title: API Title
+  version: 1.0.0
+tags:
+  - name: user
+  - name: product
+paths:
+  /users:
+    post:
+      tags:
+        - user
+      operationId: postUser
+      description: create a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserCreateRequest'
+      responses:
+        201:
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+  /users/{userId}:
+    get:
+      tags:
+        - user
+      operationId: getUser
+      description: get user by id
+      parameters:
+        - in: path
+          name: userId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+  /users/{userId}/products:
+    post:
+      tags:
+        - user
+      operationId: postProduct
+      description: create a new product
+      parameters:
+        - in: path
+          name: userId
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductCreateRequest'
+      responses:
+        201:
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductResponse'
+  /products:
+    get:
+      tags:
+        - product
+      operationId: getPageProduct
+      description: get products list
+      parameters:
+        - in: query
+          name: page
+          required: true
+          schema:
+            type: integer
+        - in: query
+          name: size
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductPageResponse'
+  /products/{productId}:
+    get:
+      tags:
+        - product
+      operationId: getProduct
+      description: get product by id
+      parameters:
+        - in: path
+          name: productId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductResponse'
+components:
+  schemas:
+
+    UserCreateRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 60
+          pattern: '^[\\w]$'
+        document:
+          type: string
+          minLength: 11
+          maxLength: 14
+          pattern: '^[\\d]$'
+        type:
+          type: string
+          enum:
+            - SELLER
+            - BUYER
+
+    UserResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        account:
+          $ref: '#/components/schemas/AccountResponse'
+        document:
+          type: string
+        type:
+          type: string
+          enum:
+            - SELLER
+            - BUYER
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+    AccountResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        balance:
+          type: number
+          format: decimal
+
+    ProductCreateRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 30
+          pattern: '^[\\w]$'
+        description:
+          type: string
+          minLength: 20
+          maxLength: 255
+          pattern: '^[\\w]$'
+        value:
+          type: number
+          format: decimal
+          minimum: 1
+          maximum: 1000000
+
+    UserProductResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+
+    ProductResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        description:
+          type: string
+        value:
+          type: number
+          format: decimal
+        seller:
+          $ref: '#/components/schemas/UserProductResponse'
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+    
+    ProductPageResponse:
+      type: object
+      properties:
+        page:
+          type: integer
+        size:
+          type: integer
+        total:
+          type: integer
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              name:
+                type: string
+              value:
+                type: number
+                format: decimal

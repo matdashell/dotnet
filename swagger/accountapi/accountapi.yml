@@ -1,0 +1,85 @@
+openapi: 3.0.0
+info:
+  title: Account API
+  version: 1.0.0
+tags:
+  - name: account
+paths:
+  /accounts:
+    post:
+      tags:
+        - account
+      operationId: postAccount
+      description: create a new account
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountCreateRequest'
+      responses:
+        201:
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountResponse'
+
+  /accounts/{accountId}:
+    get:
+      tags:
+        - account
+      operationId: getUserAccount
+      description: get account by id
+      parameters:
+        - in: path
+          name: accountId
+          required: true
+          schema:
+            type: integer
+        - in: query
+          name: userId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountResponse'
+
+components:
+  schemas:
+    AccountCreateRequest:
+      type: object
+      properties:
+        initialBalance:
+          type: number
+          minimum: 0
+          default: 0
+        document:
+          type: string
+          pattern: '^[\\d]$'
+          minLength: 11
+          maxLength: 14
+
+    AccountResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        userId:
+          type: integer
+        balance:
+          type: number
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+
+
