@@ -18,8 +18,6 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="NSwag.AspNetCore" Version="14.2.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="8.0.0" />
-
-    <Compile Include="generated\**\*.cs" />
   </ItemGroup>
 
   <Target Name="NSwag" BeforeTargets="BeforeCompile">
