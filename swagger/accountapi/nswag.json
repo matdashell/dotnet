@@ -93,7 +93,7 @@
       "templateDirectory": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": "../../infra/repository/AccountApi.cs",
+      "output": "../../generated/apiClient/AccountApi.cs",
       "newLineBehavior": "Auto"
     }
   }

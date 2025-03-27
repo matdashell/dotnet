@@ -1,14 +1,13 @@
 using AccountApi;
-using AutoMapper;
 using lojaDoDot.infra.data.repository;
+using lojaDoDot.infra.mapper;
 using Openapi;
 
 namespace lojaDoDot.infra.service.impl
 {
     public class UserService(
         IUserRepository _userRepository,
-        ApiClient _accountApi,
-        IMapper _mapper
+        ApiClient _accountApi
         ) : IUserService
     {
         public async Task<UserResponse> GetUserAsync(int userId)
@@ -19,16 +18,16 @@ namespace lojaDoDot.infra.service.impl
                 userId
             );
 
-            return _mapper.Map<UserResponse>((accountResponse, userEntity));
+            return UserMapper.ToUserResponseByUserEntityAndAccountResponse(userEntity, accountResponse);
         }
 
         public async Task<UserResponse> PostUserAsync(UserCreateRequest userCreateRequest)
         {
-            var accountCreateRequest = _mapper.Map<AccountCreateRequest>(userCreateRequest);
-            var accountResponse = await _accountApi.PostAccountAsync(accountCreateRequest); 
+            var accountCreateRequest = UserMapper.UserCreateToAccountCreate(userCreateRequest);
+            var accountResponse = await _accountApi.PostAccountAsync(accountCreateRequest);
             var userEntity = await _userRepository.PostUserAsync(userCreateRequest, accountResponse);
-            
-            return _mapper.Map<UserResponse>((userEntity, accountResponse));
+
+            return UserMapper.ToUserResponseByUserEntityAndAccountResponse(userEntity, accountResponse);
         }
     }
 }

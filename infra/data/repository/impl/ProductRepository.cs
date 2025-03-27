@@ -1,14 +1,11 @@
-using AutoMapper;
 using lojaDoDot.infra.data.entity;
+using lojaDoDot.infra.mapper;
 using Microsoft.EntityFrameworkCore;
 using Openapi;
 
 namespace lojaDoDot.infra.data.repository.impl
 {
-    public class ProductRepository(
-        AppDbContext _context,
-        IMapper _mapper
-        ) : IProductRepository
+    public class ProductRepository(AppDbContext _context) : IProductRepository
     {
         public async Task<ProductPageResponse> GetPageProductAsync(int page, int size)
         {
@@ -28,7 +25,10 @@ namespace lojaDoDot.infra.data.repository.impl
             var totalCount = await _context.ProductEntities
             .CountAsync();
 
-            return _mapper.Map<ProductPageResponse>((dataListResponse, sizeCount, totalCount, page));
+            var ProductPageResponse = ProductMapper
+                .ToProductPageResponseByData(dataListResponse, sizeCount, totalCount, page);
+
+            return ProductPageResponse;
         }
 
         public async Task<ProductEntity> GetProductAsync(int productId)
@@ -42,7 +42,7 @@ namespace lojaDoDot.infra.data.repository.impl
 
         public async Task<ProductEntity> PostProductAsync(UserEntity userEntity, ProductCreateRequest request)
         {
-            var productEntity = _mapper.Map<ProductEntity>((request, userEntity));
+            var productEntity = ProductMapper.ToEntityByRequestAndUser(userEntity, request);
             _context.ProductEntities.Add(productEntity);
             await _context.SaveChangesAsync();
 

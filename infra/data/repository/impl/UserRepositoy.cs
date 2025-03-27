@@ -1,14 +1,12 @@
-using AutoMapper;
-using lojaDoDot.infra.data;
 using lojaDoDot.infra.data.entity;
+using lojaDoDot.infra.mapper;
 using Microsoft.EntityFrameworkCore;
 using Openapi;
 
 namespace lojaDoDot.infra.data.repository.impl
 {
-    public class UserRepositoy(
-        AppDbContext _context,
-        IMapper _mapper
+    public class UserRepository(
+        AppDbContext _context
         ) : IUserRepository
     {
         public async Task<UserEntity> GetUserAsync(int userId)
@@ -21,7 +19,7 @@ namespace lojaDoDot.infra.data.repository.impl
 
         public async Task<UserEntity> PostUserAsync(UserCreateRequest request, AccountApi.AccountResponse account)
         {
-            var userEntity = _mapper.Map<UserEntity>((request, account));
+            var userEntity = UserMapper.ToUserEntityByUserCreateAndAccountResponse(request, account);
             _context.UserEntities.Add(userEntity);
             await _context.SaveChangesAsync();
         

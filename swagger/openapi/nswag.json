@@ -67,7 +67,7 @@
       "templateDirectory": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": "../../infra/controller/Controller.cs",
+      "output": "../../generated/controller/Controller.cs",
       "newLineBehavior": "Auto"
     }
   }

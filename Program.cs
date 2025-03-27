@@ -13,7 +13,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseInMemoryDatabase("TestDatabase"));
 
-builder.Services.AddScoped<IUserRepository, UserRepositoy>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 builder.Services.AddScoped<IUserService, UserService>();
@@ -26,7 +26,6 @@ builder.Services.AddHttpClient<AccountApi.ApiClient>(client =>
     client.BaseAddress = new Uri("https://localhost:7000/");
 });
 
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 var app = builder.Build();
 
 app.UseStaticFiles();
